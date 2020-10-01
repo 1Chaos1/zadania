@@ -1,0 +1,28 @@
+#include <iostream>
+#include <stdlib.h>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "rus");
+
+    double x, y, x2, y2, x3, y3, x4, y4, dx, dy, dx2, dy2;
+
+    cout << "Координаты 1-й вершины > ";
+    cin >> x >> y;
+    cout << "Координаты 2-й вершины > ";
+    cin >> x3 >> y3;
+
+    dx = (x + x3)/2;
+    dy = (y + y3)/2;
+    dx2 = (x3 - x)/2;
+    dy2 = (y3 - y)/2;
+    x2 = dx + dy2;
+    y2 = dy - dx2;
+    x4 = dx - dy2;
+    y4 = dy + dx2;
+
+    cout << "Координаты неизвестных вершин > (" << x2 << ":" << y2 << "); (" << x4 << ":" << y4 << ")";
+}
