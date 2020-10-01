@@ -1,0 +1,28 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "rus");
+
+    int p, s, i = 0;
+    double k;
+
+    cout << "Начальная стоимость ручек > ";
+    cin >> k;
+    cout << "Величина подорожания ручки (в процентах) > ";
+    cin >> p;
+    cout << "Наличные > ";
+    cin >> s;
+
+    k = k+k*p/100;
+
+    while (s>=k)
+    {
+        s = s-k;
+        i++;
+    }
+    cout << "Колличество купленных ручек > " << i << endl;
+}
