@@ -7,8 +7,7 @@ int main()
 {
     setlocale(LC_ALL, "rus");
 
-    int p, s, i = 0;
-    double k;
+    int k, p, s, i = 0;
 
     cout << "Начальная стоимость ручек > ";
     cin >> k;
@@ -17,11 +16,11 @@ int main()
     cout << "Наличные > ";
     cin >> s;
 
-    k = k+k*p/100;
+    k = k + k * (p+1) / 100;
 
-    while (s>=k)
+    while (s >= k)
     {
-        s = s-k;
+        s = s - k;
         i++;
     }
     cout << "Колличество купленных ручек > " << i << endl;
